@@ -16,6 +16,6 @@ public class OperatorTest7 {
         int age = sc.nextInt();
         System.out.println("请输入你的身高:");
         double height = sc.nextDouble();
-        System.out.println("我都姓名是" + name + "年龄" + age + "身高" + height + "cm");
+        System.out.println("我都姓名是" + name + ",年龄" + age + "岁,身高" + height + "cm");
     }
 }
