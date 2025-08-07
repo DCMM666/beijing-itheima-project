@@ -1,0 +1,59 @@
+Java 内存分配
+
+    方法区
+        类的字节码文件会被加载到此块内存
+    栈内存
+        方法被调用时会进入栈内存 , 调用完毕方法从栈内存消失
+        局部变量: 定义在方法中的变量
+    堆内存
+        new 出来的东西叫对象 , 对象在堆内存
+        特点 :
+            1. 对象在堆内存中有地址值
+            2. 对象中的数据有默认值
+                byte,short,char,int,long : 0
+                float,double : 0.0
+                boolean : false
+                引用属于类型 : null
+
+
+面向对象 : 编程思想
+    变量 : 存一个值
+    数组 : 存同种类型多个数据
+    对象 : 封装同步类型多个数据
+
+事物      ---  类 : 对事物的一种描述 , 可以把类看做一张设计图
+事物属性   ---  类中成员变量 : 定义在类中方法外的变量
+事物行为   ---  类中成员方法 : 和之前定义的方法类似,去掉了关键字 static
+
+学生 : 属性 : 名字,年龄,性别   行为 : 学习,吃饭
+class Student{
+    // 属性 : 名字,年龄,性别
+    private String name;
+    private int age;
+    private String gender;
+
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+
+    ...
+    // 行为 : 学习,吃饭
+    public void study(){....}
+    public void eat(){....}
+}
+
+类的使用 : 创建对象
+    创建对象 --> 类名 对象名 = new 类名();
+    访问属性 --> 对象名.属性名
+    访问行为 --> 对象名.方法名(...)
+
+类
+    自己定义的类   : 封装数据
+    Java提供好的类 : 提供方法(功能)        API
+
+面相对象三大特征 : 封装 继承 多态
+封装 : 隐藏实现细节 , 对外提供公共的访问方式
+private : 被 private 修饰的成员只能在本类中访问
