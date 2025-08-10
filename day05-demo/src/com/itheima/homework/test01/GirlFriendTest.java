@@ -1,4 +1,4 @@
-package com.itheima.homework.test1;
+package com.itheima.homework.test01;
 
 public class GirlFriendTest {
     public static void main(String[] args) {

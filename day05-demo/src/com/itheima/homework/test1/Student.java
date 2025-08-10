@@ -1,4 +1,4 @@
-package com.itheima.homework.test2;
+package com.itheima.homework.test1;
 
 public class Student {
     private String name;

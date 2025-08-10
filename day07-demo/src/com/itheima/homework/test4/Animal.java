@@ -1,16 +1,16 @@
-package com.itheima.homework.test1;
+package com.itheima.homework.test4;
 
-public class GirlFriend {
+public abstract class Animal {
     private String name;
-    private double height;
     private double weight;
 
-    public GirlFriend() {
+    public abstract void eat();
+
+    public Animal() {
     }
 
-    public GirlFriend(String name, double height, double weight) {
+    public Animal(String name, double weight) {
         this.name = name;
-        this.height = height;
         this.weight = weight;
     }
 
@@ -20,14 +20,6 @@ public class GirlFriend {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
     }
 
     public double getWeight() {
