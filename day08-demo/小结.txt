@@ -1,0 +1,81 @@
+代码块 : {}
+    实例代码块
+    类中方法外 : {}
+    执行时机 : 在每一个构造方法执行前执行一次
+    作用 : 抽取构造方法中的共性
+
+    静态代码块
+    类中方法外 : static{}
+    执行时机 : 随着类的加载而加载,只加载一次
+    作用 : 给类中静态变量初始化
+
+    局部代码块
+    定义方法中 : {}
+    执行时机 : 从上往下依次执行
+    作用 : 控制变量的生命周期
+
+内部类
+    实例内部类
+    静态内部类
+    局部内部类 : 匿名内部类
+
+    public class Outer{
+        // 实例内部类
+        public class Inner{
+
+        }
+
+        // 静态内部类
+        public static class Inner2{
+
+        }
+
+        public void show(){
+            // 局部内部类
+            class Inner3{
+
+            }
+            // 局部内部类对象
+            Inner3 inner3 = new Inner3();
+
+        }
+    }
+
+    class Test{
+        public static void main(String[] args){
+            // 实例内部类对象
+            Outer.Inner inner1 = new Outer().new Inner();
+            // 静态内部类对象
+            Outer.Inner inner2 = new Outer.Inner();
+
+        }
+    }
+
+匿名内部类 :
+    new 接口名/抽象类(){
+        重写抽象方法....
+    }
+    注意 : 创建出来的是子类型对象!!!
+    好处 : 简化接口和抽象类的对象创建
+
+
+包装类 :
+    byte , short , int     , long , float , double , char      , boolean
+    Byte , Short , Integer , Long , Float , Double , Character , Boolean
+
+    自动装箱 : 把基本数据类型数据赋值给了对应的包装类类型变量
+    Character c = 'a';
+    自动拆箱 : 把包装类类型的数据赋值给了对应的基本数据类型变量
+    char ch = c;
+
+    学习目的 :
+        1. 泛型中会使用   <只能是引用数据类型>      <int> 报错    --->  <Integer> 正确
+        2. String --- 基本数据类型
+            基本数据类型 -- String
+                String s1 = 基本数据类型 + "";
+                String s2 = 包装类.toString(基本数据类型);
+
+            String -- 基本数据类型
+              基本数据类型 变量名 = 包装类.parseXxx("字符串")
+
+lambda 表达式
